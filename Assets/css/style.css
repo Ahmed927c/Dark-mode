@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --black:#333;
+    --green:#017143;
+    --white:#fff;
+    --white2:#fff;
+    --black2:#333;
+}
+
+.dark{
+    --black:#fff;
+    --white:#000000;
+    --black2:#124e36;
+    
+}
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-around;
+    place-content: center;
+    background: var(--white);
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+
+header .logo{
+    position: relative;
+    max-width: 70px;
+}
+header ul{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+header ul li{
+    list-style: none;
+    display: flex;
+    margin-left:30px;
+}
+
+header ul li a{
+    display: inline-block;
+    color: var(--black);
+    font-weight: 500;
+    text-decoration: none;
+
+}
+
+
+.content{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+.content .textBox{
+    position: relative;
+    max-width: 600px;
+    z-index: 1;
+    margin-right: 20px;
+}
+
+.content .textBox h2{
+font-size: 3em;
+color: var(--black);
+line-height: 1.4em;
+font-weight: 700;
+margin-bottom: 10px;
+}
+
+.content .textBox h2 span{
+
+font-size: 1.2em;
+color: var(--green);
+
+}
+
+.content .textBox a{
+
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    background: var(--green);
+    color: var(--white2);
+    border-radius: 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.content .textBox p{
+    color: rgb(29, 170, 60);
+}
+
+.content .imgBox{
+position: relative;
+width: 500px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.content .imgBox::before{
+    content:'';
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: var(--green);
+    border-radius: 50%;
+}
+
+.content .imgBox img{
+    position: relative;
+    z-index: 1;
+    max-width: 350px;
+}
+
+.sci{
+    position: absolute;
+    bottom: 40px;
+    left: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.sci li{
+    list-style: none;
+
+}
+.sci li a{
+    display: inline-block;
+    margin-right: 15px;
+    width: 50px;
+    height: 50px;
+    background: var(--black2);
+    color: var(--white2);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+.sci li fa{
+    font-size: 1.2em;
+}
+.sci li a:hover{
+    background: var(--green);
+}
+
+.themeSwitch{
+    position:relative;
+    width: 40px;
+    height: 40px;
+    background: var(--black);
+    border-radius: 55%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.themeSwitch::before
+{
+    content: '\f186';
+    font-family: fontAwesome;
+    color: var(--white2);
+    font-size: 20px;
+}
+.themeSwitch.active::before{
+    content: '\f185';
+}
+
+
+@media screen and (max-width: 758px){
+    .content .textBox{
+        max-width: 400px;
+    }
+    .content .imgBox{
+        width: 300px;
+    }
+    .content .imgBox img{
+        max-width: 300px;
+    }
+    .content .imgBox::before{
+        width: 200px;
+        height: 200px;
+    }
+    .sci{
+        bottom: 20px;
+        left: 10px;
+    }
+    }
+
+@media screen and (max-width: 500px){
+    .content .textBox{
+        max-width: 300px;
+    }
+    .content .imgBox{
+        width: 200px;
+    }
+    .content .imgBox img{
+        max-width: 200px;
+    }
+    .content .imgBox::before{
+        width: 100px;
+        height: 100px;
+    }
+    .sci{
+        bottom: 20px;
+        left: 50px;
+    }
+}
+    
+@media screen and (max-width: 500px){
+    .themeSwitch{
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+    }
+    
+}
+
